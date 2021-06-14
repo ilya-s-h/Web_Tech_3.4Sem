@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT Общая_таблица (Таблица)+>
+<!ELEMENT Таблица (Студент)+>
+<!ATTLIST Таблица 
+  номер_группы CDATA #REQUIRED
+>
+<!ELEMENT Студент (Отметка)+>
+<!ATTLIST Студент 
+  ФИО CDATA #REQUIRED
+>
+<!ELEMENT Отметка EMPTY>
+<!ATTLIST Отметка
+  дисциплина CDATA #REQUIRED
+>
+<!ATTLIST Отметка
+  значение CDATA #REQUIRED
+>

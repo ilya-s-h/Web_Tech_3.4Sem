@@ -1,0 +1,324 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "Таблица": [
+                {
+                    "Студент ФИО=": "Иванов",
+                    "Отметка": [
+                        {
+                            "Мультимедиа": 3,
+                            "Веб-дизайн": 3,
+                            "Графика": 5
+                        }
+                    ]
+                },
+                {
+                    "Студент ФИО=": "Петрова",
+                    "Отметка": [
+                        {
+                            "Мультимедиа": 3,
+                            "Веб-дизайн": 4,
+                            "Графика": 5,
+                            "Логика": 5
+                        }
+                    ]
+                },
+                {
+                    "Студент ФИО=": "Сидоренко",
+                    "Дисциплина": [
+                        {
+                            "Мультимедиа": 3,
+                            "Веб-дизайн": 4,
+                            "Графика": 5,
+                            "Логика": 5
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "required": [
+        "Таблица"
+    ],
+    "properties": {
+        "Таблица": {
+            "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0",
+            "type": "array",
+            "title": "The Таблица schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "Студент ФИО=": "Иванов",
+                        "Отметка": [
+                            {
+                                "Мультимедиа": 3,
+                                "Веб-дизайн": 3,
+                                "Графика": 5
+                            }
+                        ]
+                    },
+                    {
+                        "Студент ФИО=": "Петрова",
+                        "Отметка": [
+                            {
+                                "Мультимедиа": 3,
+                                "Веб-дизайн": 4,
+                                "Графика": 5,
+                                "Логика": 5
+                            }
+                        ]
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "Студент ФИО=": "Иванов",
+                                "Отметка": [
+                                    {
+                                        "Мультимедиа": 3,
+                                        "Веб-дизайн": 3,
+                                        "Графика": 5
+                                    }
+                                ]
+                            }
+                        ],
+                        "required": [
+                            "Студент ФИО=",
+                            "Отметка"
+                        ],
+                        "properties": {
+                            "Студент ФИО=": {
+                                "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%20%D0%A4%D0%98%D0%9E%3D",
+                                "type": "string",
+                                "title": "The Студент ФИО= schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Иванов"
+                                ]
+                            },
+                            "Отметка": {
+                                "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%9E%D1%82%D0%BC%D0%B5%D1%82%D0%BA%D0%B0",
+                                "type": "array",
+                                "title": "The Отметка schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "Мультимедиа": 3,
+                                            "Веб-дизайн": 3,
+                                            "Графика": 5
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%9E%D1%82%D0%BC%D0%B5%D1%82%D0%BA%D0%B0/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%9E%D1%82%D0%BC%D0%B5%D1%82%D0%BA%D0%B0/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "Мультимедиа": 3,
+                                                    "Веб-дизайн": 3,
+                                                    "Графика": 5
+                                                }
+                                            ],
+                                            "required": [
+                                                "Мультимедиа",
+                                                "Веб-дизайн",
+                                                "Графика"
+                                            ],
+                                            "properties": {
+                                                "Мультимедиа": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%9E%D1%82%D0%BC%D0%B5%D1%82%D0%BA%D0%B0/items/anyOf/0/properties/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0",
+                                                    "type": "integer",
+                                                    "title": "The Мультимедиа schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        3
+                                                    ]
+                                                },
+                                                "Веб-дизайн": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%9E%D1%82%D0%BC%D0%B5%D1%82%D0%BA%D0%B0/items/anyOf/0/properties/%D0%92%D0%B5%D0%B1-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD",
+                                                    "type": "integer",
+                                                    "title": "The Веб-дизайн schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        3
+                                                    ]
+                                                },
+                                                "Графика": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/0/properties/%D0%9E%D1%82%D0%BC%D0%B5%D1%82%D0%BA%D0%B0/items/anyOf/0/properties/%D0%93%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0",
+                                                    "type": "integer",
+                                                    "title": "The Графика schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        5
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    {
+                        "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1",
+                        "type": "object",
+                        "title": "The second anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "Студент ФИО=": "Сидоренко",
+                                "Дисциплина": [
+                                    {
+                                        "Мультимедиа": 3,
+                                        "Веб-дизайн": 4,
+                                        "Графика": 5,
+                                        "Логика": 5
+                                    }
+                                ]
+                            }
+                        ],
+                        "required": [
+                            "Студент ФИО=",
+                            "Дисциплина"
+                        ],
+                        "properties": {
+                            "Студент ФИО=": {
+                                "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%20%D0%A4%D0%98%D0%9E%3D",
+                                "type": "string",
+                                "title": "The Студент ФИО= schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Сидоренко"
+                                ]
+                            },
+                            "Дисциплина": {
+                                "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0",
+                                "type": "array",
+                                "title": "The Дисциплина schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "Мультимедиа": 3,
+                                            "Веб-дизайн": 4,
+                                            "Графика": 5,
+                                            "Логика": 5
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "Мультимедиа": 3,
+                                                    "Веб-дизайн": 4,
+                                                    "Графика": 5,
+                                                    "Логика": 5
+                                                }
+                                            ],
+                                            "required": [
+                                                "Мультимедиа",
+                                                "Веб-дизайн",
+                                                "Графика",
+                                                "Логика"
+                                            ],
+                                            "properties": {
+                                                "Мультимедиа": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0/items/anyOf/0/properties/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0",
+                                                    "type": "integer",
+                                                    "title": "The Мультимедиа schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        3
+                                                    ]
+                                                },
+                                                "Веб-дизайн": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0/items/anyOf/0/properties/%D0%92%D0%B5%D0%B1-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD",
+                                                    "type": "integer",
+                                                    "title": "The Веб-дизайн schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        4
+                                                    ]
+                                                },
+                                                "Графика": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0/items/anyOf/0/properties/%D0%93%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0",
+                                                    "type": "integer",
+                                                    "title": "The Графика schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        5
+                                                    ]
+                                                },
+                                                "Логика": {
+                                                    "$id": "#/properties/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0/items/anyOf/1/properties/%D0%94%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D0%B8%D0%BD%D0%B0/items/anyOf/0/properties/%D0%9B%D0%BE%D0%B3%D0%B8%D0%BA%D0%B0",
+                                                    "type": "integer",
+                                                    "title": "The Логика schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        5
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
